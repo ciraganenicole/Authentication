@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://ciraganenicole.github.io/Authentication/)
+[Live Demo Link](https://authentication-xi-lime.vercel.app/)
 
 
 ## Getting Started
