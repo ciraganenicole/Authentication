@@ -1,0 +1,114 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: left;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding-left: 100px;
+    width: 50%;
+}
+
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.avatar {
+    width: 350px;
+    height: 350px;
+}
+.goo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.title, details {
+    text-align: start;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 60%;
+}
+
+.forget {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forgetPass {
+    text-decoration: none;
+    color: black;
+}
+
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: solid black 1px;
+    cursor: pointer;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+  }
+
+  .google {
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: solid black 1px;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
