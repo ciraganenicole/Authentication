@@ -1,17 +1,38 @@
-const form = document.getElementById("form");
-const submit = (e) => {
-  e.preventDefault();
+const form = document.querySelector("form"),
+  emailField = form.querySelector(".email-field"),
+  emailInput = emailField.querySelector(".email"),
+  passField = form.querySelector(".create-password"),
+  passInput = passField.querySelector(".password")
 
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-
-  if (email.value !== "ciraganenicole@gmail.com" || password.value !== "2020") {
-    alert("Incorrect credentials");
-    return false;
-  } else {
-    window.location.href = "/login.html";
-    form.reset();
+function checkEmail() {
+  const emaiPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!emailInput.value.match(emaiPattern)) {
+    return emailField.classList.add("invalid");
   }
-};
+  emailField.classList.remove("invalid"); 
+}
 
-form.addEventListener("submit", submit);
+function createPass() {
+  const passPattern =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  if (!passInput.value.match(passPattern)) {
+    return passField.classList.add("invalid");
+  }
+  passField.classList.remove("invalid");
+}
+
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); 
+  checkEmail();
+  createPass();
+
+  emailInput.addEventListener("keyup", checkEmail);
+  passInput.addEventListener("keyup", createPass);
+  if (
+    !emailField.classList.contains("invalid") &&
+    !passField.classList.contains("invalid")
+  ) {
+    location.href = form.getAttribute("action");
+  }
+});
