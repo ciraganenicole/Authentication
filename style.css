@@ -72,7 +72,7 @@ h1 {
     color: black;
 }
 
-input[type=email], input[type=password] {
+.loginEmail {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -88,9 +88,9 @@ input[type=email], input[type=password] {
     margin: 8px 0;
     border: solid black 1px;
     cursor: pointer;
-    width: 100%;
     background-color: black;
     border-radius: 10px;
+    width: 100%;
   }
 
   .google {
@@ -107,8 +107,66 @@ input[type=email], input[type=password] {
     align-items: center;
     justify-content: center;
   }
-  
-  /* Add a hover effect for buttons */
-  button:hover {
-    opacity: 0.8;
+
+  .forms {
+    width: 60%;
+  }
+
+  .invalid input {
+    border-color: #d93025;
+  }
+  .input-field {
+    position: absolute;
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+  }
+  .field .error {
+    display: flex;
+    align-items: center;
+    color: #d93025;
+    font-size: 13px;
+    display: none;
+  }
+  .invalid .error {
+    display: flex;
+  }
+  .error .error-icon {
+    margin-right: 6px;
+    font-size: 15px;
+  }
+  .create-password .email .error {
+    align-items: flex-start;
+  }
+  .create-password .error-icon {
+    margin-top: 4px;
+  }
+
+  .input-field {
+    position: relative;
+    height: 50px;
+    width: 90%;
+    margin-top: 10px;
+  }
+  .input-field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0 15px;
+    border: 1px solid #d1d1d1;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding-left: 100px;
+    width: 50%;
+  }
+  .container form {
+    margin-top: 30px;
   }
